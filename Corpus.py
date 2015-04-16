@@ -10,7 +10,6 @@ resemblence to the corpus using Markov chains.
 import random
 import nltk
 import codecs
-import pprint
 
 class Generator(object):
 	def __init__(self, filename):
@@ -52,6 +51,4 @@ class Generator(object):
 			words.append(w1)
 			w1, w2 = w2, random.choice(self.dictionary[(w1, w2)])
 		words.append(w2)
-
-		pprint.pprint(self.dictionary)
 		return ' '.join(words)
